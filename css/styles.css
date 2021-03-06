@@ -1,0 +1,365 @@
+:root{
+  --bk: #1B1310;
+  --character_color: #141414;
+}
+
+.container{
+  margin: 0 8%;
+}
+
+.noscroll{
+  overflow: hidden;
+}
+
+/* header */
+.page-header{
+  font-family: 'Roboto';
+  background: var(--bk);
+  color:white;
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
+  position: relative;
+}
+
+.logo{
+  font-size: 2.6em;
+  padding: 24px 0;
+}
+
+.navigations{
+  display: flex;
+  align-items: center;
+  height: 74px;
+  font-size: 1.6em;
+}
+
+.navigations li:not(:last-child){
+  margin-right: 54px;
+}
+
+.hamburger-menu{
+  display: none;
+}
+
+.main-visual{
+  width: 100vw;
+  height: 51.37vw;
+  background-image: url("../img/fv-bgi@2x.jpg");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.page-title{
+  font-size: 5.0em;
+  color: white;
+  letter-spacing: 0.05em;
+  padding: 35px 42px;
+  line-height: 1.2;
+  border: 2px solid white;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+}
+
+/* main */
+.section-title{
+  font-size: 3.6em;
+  padding: 100px 0 70px 0;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.title-copy{
+  font-family: 'noto-sans-cjk-jp';
+  font-size: 2.4rem;
+  padding-bottom: 40px;
+  line-height: 2;
+}
+
+.section-text{
+  font-family: 'noto-sans-cjk-jp';
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.contents{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.contents img{
+  max-width: 480px;
+}
+
+.content{
+  max-width: 480px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.contents:last-child{
+  flex-direction: row-reverse;
+}
+
+.news-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news-content .news-info{
+  margin-right: 10px;
+}
+
+.news-info{
+  max-width: 320px;
+  width: calc((100% - 30px) / 3);
+  box-shadow: 0 0 5px 0 rgba(0,0,0,0.4);
+}
+
+.news-info img{
+  width: 100%;
+}
+
+.news-info-text{
+  font-family: 'Hiragino Kaku Gothic ProN';
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: 22.5px 33px;
+  letter-spacing: 0.05em;
+}
+/* contact */
+.contact-form{
+  width: 700px;
+  margin: 0 auto;
+}
+
+.form-parts{
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  font-family: 'Hiragino Kaku Gothic ProN';
+}
+
+input[type="text"], input[type="email"]{
+  display:block;
+  width: 700px;
+  border: 1px solid var(--character_color);
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: 10px;
+  font-size: 1.6rem;
+  line-height: 2;
+  resize: none;
+}
+
+textarea{
+  resize: none;
+  height: 171px;
+  width: 700px;
+  border: 1px solid var(--character_color);
+  margin-bottom: 50px;
+  margin-top: 5px;
+  padding: 10px;
+  line-height: 2;
+  font-size: 1.6rem;
+}
+
+button{
+  display: inline-block;
+  width: 235px;
+  height: 60px;
+  background-color: var(--bk);
+  color: white;
+  border-radius: 51px;
+  margin-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.0rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 6px rgb(27,19,16,40%);
+}
+
+button:hover{
+  opacity: 0.8;
+  transition: opacity .1s;
+}
+
+.button-wrapper{
+  text-align: center;
+}
+
+/* footer */
+.copyright{
+  padding: 30px 0;
+  font-size: 1.4rem;
+  color: white;
+  background-color: var(--bk);
+  text-align: center;
+}
+
+/* ハンバーガーメニュー*/
+.hamburger-menu__list{
+  background-color: var(--bk);
+  width: 100%;
+  height: calc(157.3vw + 76px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: none;
+}
+
+.menu-list{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.menu-list li{
+  font-size: 1.6rem;
+}
+
+.menu-list li:not(:last-child){
+  margin-bottom: 50px;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px){
+  .container{
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .page-header{
+    padding: 0 4%;
+    position: relative;
+  }
+
+  .hamburger-menu{
+    display: block;
+    width: 25px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+
+  .hamburger-menu__line{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 4%;
+    transition: all .3s;
+  }
+
+  .top-line{
+    transform: translateY(-8px);
+  }
+
+  .bottom-line{
+    transform: translateY(8px);
+  }
+
+  .hamburger-menu.open .hamburger-menu__line.bottom-line.open{
+    transform: rotate(-45deg);
+    transition: transform .3s;
+  }
+
+  .hamburger-menu.open .hamburger-menu__line.center-line.open{
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  .hamburger-menu.open .hamburger-menu__line.top-line.open{
+    transform: rotate(45deg);
+    transition: transform .3s;
+  }
+
+  .page-title{
+    font-size: 3.0rem;
+    padding: 30px 40px;
+    white-space: nowrap;
+  }
+
+  .main-visual{
+    height: 157.3vw;
+  }
+
+  nav{
+    display: none;
+  }
+
+  .section-text{
+    margin-bottom: 40px;
+  }
+
+  .title-copy{
+    font-size: 2rem;
+    padding-bottom: 30px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+
+  .contents, .contents:last-child{
+    flex-direction: column-reverse;
+  }
+
+  .contents img, .contents .content{
+    width: 100%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contents img{
+    height: 43.48%;
+    object-fit: cover;
+  }
+
+  .news-content{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .news-info{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .news-info img{
+    width: 100%;
+    height: 62.5%;
+  }
+
+  .contact-form,input[type="text"], input[type="email"], textarea{
+    width: 100%;
+  }
+
+  .copyright{
+    padding: 20px 0;
+  }
+}
+
