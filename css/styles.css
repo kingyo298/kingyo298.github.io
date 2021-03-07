@@ -343,6 +343,10 @@ button:hover{
     width: 100%;
     flex-direction: column;
   }
+  
+  .news-content .news-info{
+    margin-right: 0;
+  }
 
   .news-info{
     width: 100%;
